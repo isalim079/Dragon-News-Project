@@ -1,18 +1,21 @@
-import { Box, Grid } from "@mui/material";
+import LatestNews from "@/components/ui/LatestNews/LatestNews";
+import SideBar from "@/components/ui/SideBar/SideBar";
+import { Grid } from "@mui/material";
 
-export default function Home() {
-    return (
-        <div>
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={8}>
-                        <h1>Latest News</h1>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <h1>SideBar</h1>
-                    </Grid>
-                </Grid>
-            </Box>
-        </div>
-    );
-}
+const HomePage = () => {
+  // throw new Error();
+  return (
+    <>
+      <Grid container spacing={2}>
+        <Grid item xs={8}>
+          <LatestNews />
+        </Grid>
+        <Grid item xs={4}>
+          <SideBar />
+        </Grid>
+      </Grid>
+    </>
+  );
+};
+
+export default HomePage;
